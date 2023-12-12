@@ -16,7 +16,153 @@
   <div id="player"></div>
 
  <script>
-function _0x523a(){const _0xaa3ba7=['setup','Bearer\x20','player','611225sMduVQ','chid','2760150wtqhlK','apply','eyJ0eXAiOiJKV1QiLCJraWQiOiJ3VTNpZklJYUxPVUFSZVJCL0ZHNmVNMVAxUU09IiwiYWxnIjoiUlMyNTYifQ.eyJhdF9oYXNoIjoiZHpna1Z6OVB2Smk5TjFkMm4ycXItdyIsInN1YiI6InZpZ2lhcGFzQGhvdG1haWwuY29tIiwiYnVzaW5lc3NVbml0IjoiU1NMQS1EVEgiLCJyZWdpb25zIjpbImY5MTdjZmY2LTAyNWEtNDkxNy04NGQ2LWZiNjg2Njk3ZDkzYyIsIjJlMTY3MjM3LWM3YmItNDIzYi1iNjA2LWMzMTExNWFkYjFkYSJdLCJhdWRpdFRyYWNraW5nSWQiOiI3MTlhMDM5OS03MzdiLTQyYzEtOTQxOS0xZDkyYzM5MzZlOGEtNzQ2NTY1NzMiLCJpc28yQ29kZSI6IkFSIiwiaXNzIjoiaHR0cHM6Ly9wcm9kcm9jay5kaXJlY3R2Z28uY29tOjQ0My9vcGVuYW0vb2F1dGgyL3JlYWxtcy9yb290L3JlYWxtcy9zc2xhIiwidG9rZW5OYW1lIjoiaWRfdG9rZW4iLCJkZXZpY2VJZCI6IlgzQ1U3dWh2RkFRWUhhM0lfQVpGanJVQWd4NFNPNVdTMGhGTkhSbFJlX2MiLCJjdXN0b21lclN0YXR1cyI6IkFjdGl2ZSIsImF6cCI6ImR0dmdvIiwiZmFtaWx5TmFtZSI6IlNBWUVTIiwiYXV0aF90aW1lIjoxNzAxODA1OTA3LCJjdXN0b21lcklkIjoiMjM3MjgxODYiLCJleHAiOjE3MDI0NjkwMjQsImlhdCI6MTcwMjMwMzQyNCwiY3VzdG9tZXJTdGF0dXNNZXNzYWdlIjoiMTAwMSIsImlic0FjY291bnRTdGF0dXMiOiJBQ1RJVkUiLCJnaXZlbk5hbWUiOiJQQUJMTyBBTEVYSSIsInNlcnZpY2VQcm92aWRlckFjY291bnRJZCI6IjU4MGVkZWNmLWVhN2QtNDY2Ni1hNDI5LTQwZmVjY2E3MmM1YiIsInZyaW9EZXZpY2VJZCI6ImRhYmFlY2YwLTAxNTMtNDQzMy04YzhlLWM3MWFjZTdlNGFlOCIsImF1ZCI6ImR0dmdvIiwiQ0IxIjpmYWxzZSwiY2hhbm5lbHMiOlsiQ0gwMTAwMDAwMDAwMDE5IiwiQ0gwMTAwMDAwMDAwMTY3IiwiQ0gwMTAwMDAwMDAwMDc2IiwiQ0gwMTAwMDAwMDAwMTA3IiwiQ0gwMTAwMDAwMDAwMjAyIiwiQ0gwMTAwMDAwMDAwMDI2IiwiQ0gwMTAwMDAwMDAwMTY5IiwiQ0gwMTAwMDAwMDAwMTUxIiwiQ0gwMTAwMDAwMDAwMjE2IiwiQ0gwMTAwMDAwMDAwMjA5IiwiQ0gwMTAwMDAwMDAwMDc1IiwiQ0gwMTAwMDAwMDAwMjk1IiwiQ0gwMTAwMDAwMDAwMjkzIiwiQ0gwMTAwMDAwMDAwMDM5IiwiQ0gwMTAwMDAwMDAwMDg3IiwiQ0gwMTAwMDAwMDAwMjI5IiwiQ0gwMTAwMDAwMDAwMDE4IiwiQ0gwMTAwMDAwMDAwMDY4IiwiQ0gwMTAwMDAwMDAwMDM4IiwiQ0gwMTAwMDAwMDAwMDIwIiwiQ0gwMTAwMDAwMDAwMDE1IiwiQ0gwMTAwMDAwMDAwMTQyIiwiQ0gwMTAwMDAwMDAwMTQwIiwiQ0gwMTAwMDAwMDAwMTcxIiwiQ0gwMTAwMDAwMDAwMTE3IiwiQ0gwMTAwMDAwMDAwMDY1IiwiQ0gwMTAwMDAwMDAwMDQ2IiwiQ0gwMTAwMDAwMDAwMjM1IiwiQ0gwMTAwMDAwMDAwMjg2IiwiQ0gwMTAwMDAwMDAwMjMwIiwiQ0gwMTAwMDAwMDAwMjkyIiwiQ0gwMTAwMDAwMDAwMDUxIiwiQ0gwMTAwMDAwMDAwMTM5IiwiQ0gwMTAwMDAwMDAwMjAzIiwiQ0gwMTAwMDAwMDAwMDUwIiwiQ0gwMTAwMDAwMDAwMDc0IiwiQ0gwMTAwMDAwMDAwMTE4IiwiQ0gwMTAwMDAwMDAwMDE2IiwiQ0gwMTAwMDAwMDAwMTYxIiwiQ0gwMTAwMDAwMDAwMTYzIiwiQ0gwMTAwMDAwMDAwMDEwIiwiQ0gwMTAwMDAwMDAwMDM2IiwiQ0gwMTAwMDAwMDAwMjE0IiwiQ0gwMTAwMDAwMDAwMTYyIiwiQ0gwMTAwMDAwMDAwMjcxIiwiQ0gwMTAwMDAwMDAwMTc3IiwiQ0gwMTAwMDAwMDAwMDgwIiwiQ0gwMTAwMDAwMDAwMDY0IiwiQ0gwMTAwMDAwMDAwMDk0IiwiQ0gwMTAwMDAwMDAwMDg2IiwiQ0gwMTAwMDAwMDAwMTA0IiwiQ0gwMTAwMDAwMDAwMTQ4IiwiQ0gwMTAwMDAwMDAwMTE2IiwiQ0gwMTAwMDAwMDAwMTg2IiwiQ0gwMTAwMDAwMDAwMjE1IiwiQ0gwMTAwMDAwMDAwMjIzIiwiQ0gwMTAwMDAwMDAwMjI1IiwiQ0gwMTAwMDAwMDAwMjQ3IiwiQ0gwMTAwMDAwMDAwMjQ5IiwiQ0gwMTAwMDAwMDAwMjU5IiwiQ0gwMTAwMDAwMDAwMDIxIiwiQ0gwMTAwMDAwMDAwMTI4IiwiQ0gwMTAwMDAwMDAwMDM3IiwiQ0gwMTAwMDAwMDAwMjY4IiwiQ0gwMTAwMDAwMDAwMjM2IiwiQ0gwMTAwMDAwMDAwMjQ2IiwiQ0gwMTAwMDAwMDAwMDMwIiwiQ0gwMTAwMDAwMDAwMTQ2IiwiQ0gwMTAwMDAwMDAwMTUyIiwiQ0gwMTAwMDAwMDAwMTU1IiwiQ0gwMTAwMDAwMDAwMTE1IiwiQ0gwMTAwMDAwMDAwMDMxIiwiQ0gwMTAwMDAwMDAwMTk0IiwiQ0gwMTAwMDAwMDAwMjExIiwiQ0gwMTAwMDAwMDAwMjY5IiwiQ0gwMTAwMDAwMDAwMjYzIiwiQ0gwMTAwMDAwMDAwMDk4IiwiQ0gwMTAwMDAwMDAwMjA3IiwiQ0gwMTAwMDAwMDAwMDUzIiwiQ0gwMTAwMDAwMDAwMDQ0IiwiQ0gwMTAwMDAwMDAwMDQwIiwiQ0gwMTAwMDAwMDAwMTgyIiwiQ0gwMTAwMDAwMDAwMDQ4IiwiQ0gwMTAwMDAwMDAwMjA1IiwiQ0gwMTAwMDAwMDAwMjcwIiwiQ0gwMTAwMDAwMDAwMjY3IiwiQ0gwMTAwMDAwMDAwMDUyIiwiQ0gwMTAwMDAwMDAwMDkzIiwiQ0gwMTAwMDAwMDAwMjIyIiwiQ0gwMTAwMDAwMDAwMDcwIiwiQ0gwMTAwMDAwMDAwMjM5IiwiQ0gwMTAwMDAwMDAwMDcxIiwiQ0gwMTAwMDAwMDAwMDg1IiwiQ0gwMTAwMDAwMDAwMDg5IiwiQ0gwMTAwMDAwMDAwMTkzIiwiQ0gwMTAwMDAwMDAwMDkyIiwiQ0gwMTAwMDAwMDAwMTA2IiwiQ0gwMTAwMDAwMDAwMTExIiwiQ0gwMTAwMDAwMDAwMTEyIiwiQ0gwMTAwMDAwMDAwMTE5IiwiQ0gwMTAwMDAwMDAwMzAyIiwiQ0gwMTAwMDAwMDAwMTQxIiwiQ0gwMTAwMDAwMDAwMjgxIiwiQ0gwMTAwMDAwMDAwMTMxIiwiQ0gwMTAwMDAwMDAwMjgzIiwiQ0gwMTAwMDAwMDAwMjk4IiwiQ0gwMTAwMDAwMDAwMjEwIiwiQ0gwMTAwMDAwMDAwMjA4IiwiQ0gwMTAwMDAwMDAwMjI2IiwiQ0gwMTAwMDAwMDAwMjM4IiwiQ0gwMTAwMDAwMDAwMjczIiwiQ0gwMTAwMDAwMDAwMTM1IiwiQ0gwMTAwMDAwMDAwMjc2IiwiQ0gwMTAwMDAwMDAwMzEyIiwiQ0gwMTAwMDAwMDAwMzEzIiwiQ0gwMTAwMDAwMDAwMzE1IiwiQ0gwMTAwMDAwMDAwMzE2IiwiQ0gwMTAwMDAwMDAwMzE3IiwiQ0gwMTAwMDAwMDAwMzMwIiwiQ0gwMTAwMDAwMDAwMzMxIiwiQ0gwMTAwMDAwMDAwMzM0IiwiQ0gwMTAwMDAwMDAwMzM1IiwiQ0gwMTAwMDAwMDAwMzM2IiwiQ0gwMTAwMDAwMDAwMzM3IiwiQ0gwMTAwMDAwMDAwMzQyIiwiQ0gwMTAwMDAwMDAwMzQwIiwiQ0gwMTAwMDAwMDAwMzQxIiwiQ0gwMTAwMDAwMDAwMzQzIl0sInZyaW9DdXN0b21lcklkIjoiNTgwZWRlY2YtZWE3ZC00NjY2LWE0MjktNDBmZWNjYTcyYzViIiwibmFtZSI6IlBBQkxPIEFMRVhJIFNBWUVTIiwicmVhbG0iOiIvc3NsYSIsImNzbSI6IjIiLCJ0b2tlblR5cGUiOiJKV1RUb2tlbiJ9.hXTL1W4atx9XWk1S0sNjzZTYs7wnpdDZ5hkgJhHO1D1zPZnI2GJ1IwAf4TNQDWIX2E-dQXzve3ETxzAPzbLYZqqmFDtkLSmFoLU0pn_2jL0iotphBYYQUybz76eXSzhtXy8sSwGsag3YyneNxSG0_wsT3mha5ENFXzwIg2F4UkcvS6qGB-b6eSCN2Wk4p2jEEjP9Tira-7EZt3Obi43EiQ1uk5ZQfk9006rLXj5ec90ALkzM_TZedz-zJDjZaab6cNCVzf1DY_7yqGbNSLwZki6cbm2q3DVybDqjm2fAeZXhWMpq9XuEUhUKBcdBWzaUoKM1l2XBgPach2n_s4g8gA','search','de7d7ded48b437d691966acdc8a97262','a7dbd673c51a4c73522e7d1a240fa7bc','{}.constructor(\x22return\x20this\x22)(\x20)','HTTP\x20error!\x20status:\x20','json','error','hdntl','key','https://api.directvgo.com/entitlement/v3/playback/token/authorizer','Error\x20fetching\x20MPD:','CH0100000000340','2454831CHmPZC','Mirá\x20Gran\x20Hermano\x20en\x20vivo\x20|\x20gh.acltv.live','CH0100000000343','indexOf','9551559085843488876b472cd5416000','7830b692416a413e1f31fb81a3bdf752','CH0100000000341','stringify','manifest','fromCharCode','c1696c67cf7a678932d33340135ea82b','web','POST','dash','get','16:9','[?&]','5122368RUUKrd','No\x20se\x20encontró\x20información\x20para\x20el\x20canal\x20especificado\x20en\x20la\x20URL.','headers','1281986vQOwcL','=([^&#]*)','1407231wTiMlM','Header\x20\x22hdntl\x22\x20not\x20found\x20in\x20the\x20response.','charCodeAt','text','status','ROFaNYWOHpurofutbFolR.nexOJzt;zdiFreGXcJtvapTgY.HsTcUo;UejCmIbed.asZpGurETDzoTOfutyQbolK.SnOJCCetXysI;TemhbIyedR.diZresctvapg.FcoXTZXDyMVwJYDSOLHGAjyALLJDxRqWqyTMXPRThhZIWLsTkYyhjSVMZATGzChPwRHXTSGZqLFZMhYxAEWVRSKMMOBDBHS','CH0100000000342','Error\x20fetching\x20authorization\x20token:','length','log','b6f78e54681b209ceae4ed382bbe20fc','CH0100000000229','[ROFNYWOHFRxOJzzFGXJTYHsTUUjCIsZGETDzTOyQKSOJCCXysIThIyRZsFXTZXDyMVwJYDSOLHGAjyALLJDxRqWqyTMXPRThhZIWLsTkYyhjSVMZATGzChPwRHXTSGZqLFZMhYxAEWVRSKMMOBDBHS]','[jSDeRqpzGiAcdgdAMOLSvqVqFOQTY]','keyId','206ba28f691f34f88d8886cc42702c4c','return\x20(function()\x20','then','78ecb51bf93594cd4a7d904bd48bbd0a','split','5WZEnXx','hdntl:','Hdntl','e623d07319101376ceccf2ed74631c7a','CH0100000000091','replace','primary','cfcaedf675745b9c81e5a55bde8f530b','Información\x20incompleta\x20para\x20el\x20canal\x20actual.','1552340bidFQt','100%'];_0x523a=function(){return _0xaa3ba7;};return _0x523a();}const _0x280fd1=_0x183e;(function(_0x2b0064,_0x2890aa){const _0x59857e=_0x183e,_0x47b05a=_0x2b0064();while(!![]){try{const _0x11ce1e=parseInt(_0x59857e(0x128))/0x1+parseInt(_0x59857e(0x14d))/0x2+-parseInt(_0x59857e(0x139))/0x3+parseInt(_0x59857e(0x123))/0x4+parseInt(_0x59857e(0x11a))/0x5*(parseInt(_0x59857e(0x12a))/0x6)+-parseInt(_0x59857e(0x14f))/0x7+-parseInt(_0x59857e(0x14a))/0x8;if(_0x11ce1e===_0x2890aa)break;else _0x47b05a['push'](_0x47b05a['shift']());}catch(_0x38fd26){_0x47b05a['push'](_0x47b05a['shift']());}}}(_0x523a,0x6b992));function _0x183e(_0xaa3bf,_0x57e23d){const _0x518e6a=_0x523a();return _0x183e=function(_0x1146c9,_0x47f171){_0x1146c9=_0x1146c9-0x10f;let _0x509040=_0x518e6a[_0x1146c9];return _0x509040;},_0x183e(_0xaa3bf,_0x57e23d);}let token=_0x280fd1(0x12c);var channelId=getParameterByName('id');let channelInfo={'GH':{'chid':_0x280fd1(0x13f),'keyId':_0x280fd1(0x12e),'key':_0x280fd1(0x143)},'GHCAMARA1':{'chid':_0x280fd1(0x155),'keyId':_0x280fd1(0x13d),'key':_0x280fd1(0x12f)},'GHCAMARA2':{'chid':_0x280fd1(0x13b),'keyId':_0x280fd1(0x115),'key':_0x280fd1(0x13e)},'GHCAMARA3':{'chid':_0x280fd1(0x138),'keyId':'cd9941e77fc63100986acdcb6bcba661','key':'dc9b59d9a8397b756bdd2607c7614476'},'TELEFE':{'chid':'CH0100000000051','keyId':'d83e2e0cb9735bea9fc9f0b90cea1e14','key':_0x280fd1(0x118)},'EMILIO_PUTAMADRE':{'chid':_0x280fd1(0x111),'keyId':_0x280fd1(0x121),'key':_0x280fd1(0x11d)},'ANAL_13_MAMAS_CRECE':{'chid':_0x280fd1(0x11e),'keyId':'af1d38723d0c3c8e8cb7d4453ba47d3e','key':_0x280fd1(0x110)}},currentChannel=channelInfo[channelId];currentChannel?fetchAuthorizationToken(token,currentChannel):console[_0x280fd1(0x133)](_0x280fd1(0x14b));function fetchAuthorizationToken(_0x179504,_0x5cac74){const _0x50b2d0=_0x280fd1,_0x336589=(function(){let _0x3eba6e=!![];return function(_0x203cc0,_0x2d9694){const _0x3ddeed=_0x3eba6e?function(){const _0x179371=_0x183e;if(_0x2d9694){const _0x2510cd=_0x2d9694[_0x179371(0x12b)](_0x203cc0,arguments);return _0x2d9694=null,_0x2510cd;}}:function(){};return _0x3eba6e=![],_0x3ddeed;};}()),_0x37044d=_0x336589(this,function(){const _0xe51b48=_0x183e;let _0x1b6286;try{const _0x5c5baa=Function(_0xe51b48(0x116)+_0xe51b48(0x130)+');');_0x1b6286=_0x5c5baa();}catch(_0x3bd97d){_0x1b6286=window;}const _0x5c5722=new RegExp(_0xe51b48(0x112),'g'),_0x3ce1b9=_0xe51b48(0x154)[_0xe51b48(0x11f)](_0x5c5722,'')[_0xe51b48(0x119)](';');let _0x4f8789,_0x21e1ce,_0x9773e4,_0x38e943;const _0x6a763d=function(_0x56051c,_0x9788e4,_0x1a5901){const _0x22e2e4=_0xe51b48;if(_0x56051c[_0x22e2e4(0x157)]!=_0x9788e4)return![];for(let _0x1e9301=0x0;_0x1e9301<_0x9788e4;_0x1e9301++){for(let _0x23f2ca=0x0;_0x23f2ca<_0x1a5901['length'];_0x23f2ca+=0x2){if(_0x1e9301==_0x1a5901[_0x23f2ca]&&_0x56051c[_0x22e2e4(0x151)](_0x1e9301)!=_0x1a5901[_0x23f2ca+0x1])return![];}}return!![];},_0x5ae3ad=function(_0x17fe61,_0x25ee2c,_0x47f560){return _0x6a763d(_0x25ee2c,_0x47f560,_0x17fe61);},_0x3d0385=function(_0x33e6a7,_0x5bc3ed,_0x1d59ad){return _0x5ae3ad(_0x5bc3ed,_0x33e6a7,_0x1d59ad);},_0x35d00f=function(_0x221eac,_0xf3a58e,_0x5d28ea){return _0x3d0385(_0xf3a58e,_0x5d28ea,_0x221eac);};for(let _0x2dbd98 in _0x1b6286){if(_0x6a763d(_0x2dbd98,0x8,[0x7,0x74,0x5,0x65,0x3,0x75,0x0,0x64])){_0x4f8789=_0x2dbd98;break;}}for(let _0x1e26f2 in _0x1b6286[_0x4f8789]){if(_0x35d00f(0x6,_0x1e26f2,[0x5,0x6e,0x0,0x64])){_0x21e1ce=_0x1e26f2;break;}}for(let _0x2744d1 in _0x1b6286[_0x4f8789]){if(_0x3d0385(_0x2744d1,[0x7,0x6e,0x0,0x6c],0x8)){_0x9773e4=_0x2744d1;break;}}if(!('~'>_0x21e1ce))for(let _0x2d5802 in _0x1b6286[_0x4f8789][_0x9773e4]){if(_0x5ae3ad([0x7,0x65,0x0,0x68],_0x2d5802,0x8)){_0x38e943=_0x2d5802;break;}}if(!_0x4f8789||!_0x1b6286[_0x4f8789])return;const _0x316dbe=_0x1b6286[_0x4f8789][_0x21e1ce],_0xd8223c=!!_0x1b6286[_0x4f8789][_0x9773e4]&&_0x1b6286[_0x4f8789][_0x9773e4][_0x38e943],_0x3a7397=_0x316dbe||_0xd8223c;if(!_0x3a7397)return;let _0x4faf8f=![];for(let _0x27ca84=0x0;_0x27ca84<_0x3ce1b9[_0xe51b48(0x157)];_0x27ca84++){const _0x28f9c1=_0x3ce1b9[_0x27ca84],_0x27886d=_0x28f9c1[0x0]===String[_0xe51b48(0x142)](0x2e)?_0x28f9c1['slice'](0x1):_0x28f9c1,_0x2cc9f1=_0x3a7397[_0xe51b48(0x157)]-_0x27886d[_0xe51b48(0x157)],_0x3017e3=_0x3a7397[_0xe51b48(0x13c)](_0x27886d,_0x2cc9f1),_0x1ac93a=_0x3017e3!==-0x1&&_0x3017e3===_0x2cc9f1;_0x1ac93a&&((_0x3a7397['length']==_0x28f9c1[_0xe51b48(0x157)]||_0x28f9c1[_0xe51b48(0x13c)]('.')===0x0)&&(_0x4faf8f=!![]));}if(!_0x4faf8f){const _0xf2d77f=new RegExp(_0xe51b48(0x113),'g'),_0x1dbdd4='jSabDeoRut:blaqnkpzGiAcdgdAMOLSvqVqFOQTY'[_0xe51b48(0x11f)](_0xf2d77f,'');_0x1b6286[_0x4f8789][_0x9773e4]=_0x1dbdd4;}});_0x37044d(),_0x5cac74&&_0x5cac74[_0x50b2d0(0x114)]&&_0x5cac74[_0x50b2d0(0x135)]?fetch(_0x50b2d0(0x136),{'method':_0x50b2d0(0x145),'headers':{'Authorization':_0x50b2d0(0x126)+_0x179504,'Content-Type':'application/json','X-Client-Id':_0x50b2d0(0x144),'X-Client-Version':'3.17.0'},'body':JSON[_0x50b2d0(0x140)]({'contentId':_0x5cac74[_0x50b2d0(0x129)],'delay':0x0,'isLive':!![],'mobileNetwork':!![]})})[_0x50b2d0(0x117)](_0x4b7b38=>_0x4b7b38[_0x50b2d0(0x132)]())[_0x50b2d0(0x117)](_0x90c125=>{const _0x328f2a=_0x50b2d0;if(_0x90c125['manifest']&&_0x90c125['manifest']['dash']&&_0x90c125['manifest'][_0x328f2a(0x146)][_0x328f2a(0x120)]){let _0x388fab=_0x90c125[_0x328f2a(0x141)]['dash']['primary'];fetch(_0x388fab)[_0x328f2a(0x117)](_0x1a1577=>{const _0x10fe39=_0x328f2a;if(!_0x1a1577['ok'])throw new Error(_0x10fe39(0x131)+_0x1a1577[_0x10fe39(0x153)]);const _0x193d4f=_0x1a1577[_0x10fe39(0x14c)][_0x10fe39(0x147)](_0x10fe39(0x134));if(_0x193d4f){console['log'](_0x10fe39(0x11b),_0x193d4f);let _0x407344=jwplayer(_0x10fe39(0x127));_0x407344[_0x10fe39(0x125)]({'playlist':[{'sources':[{'default':![],'type':'dash','title':_0x10fe39(0x13a),'file':_0x388fab,'drm':{'clearkey':{'keyId':_0x5cac74[_0x10fe39(0x114)],'key':_0x5cac74[_0x10fe39(0x135)]}},'label':'0','onXhrOpen':function(_0x140db2,_0x5d6f96){const _0x4c3de5=_0x10fe39;!_0x5d6f96['includes']('manifest.mpd')&&_0x140db2['setRequestHeader'](_0x4c3de5(0x11c),_0x193d4f);}}]}],'width':_0x10fe39(0x124),'height':_0x10fe39(0x124),'aspectratio':_0x10fe39(0x148),'autostart':![],'cast':!![],'sharing':!![]});}else console[_0x10fe39(0x10f)](_0x10fe39(0x150));return _0x1a1577[_0x10fe39(0x152)]();})['catch'](_0x4cb9cd=>console[_0x328f2a(0x133)](_0x328f2a(0x137),_0x4cb9cd));}else console['error']('Dash\x20primary\x20URL\x20not\x20found\x20in\x20the\x20response.');})['catch'](_0x402224=>console[_0x50b2d0(0x133)](_0x50b2d0(0x156),_0x402224)):console['error'](_0x50b2d0(0x122));}function getParameterByName(_0x1270c3){const _0x2fd7ec=_0x280fd1;_0x1270c3=_0x1270c3['replace'](/[\[]/,'[')[_0x2fd7ec(0x11f)](/[\]]/,']');var _0x4657b4=new RegExp(_0x2fd7ec(0x149)+_0x1270c3+_0x2fd7ec(0x14e)),_0x2b6542=_0x4657b4['exec'](location[_0x2fd7ec(0x12d)]);return _0x2b6542===null?'':decodeURIComponent(_0x2b6542[0x1]['replace'](/\+/g,'\x20'));}
+let token = "eyJ0eXAiOiJKV1QiLCJraWQiOiJ3VTNpZklJYUxPVUFSZVJCL0ZHNmVNMVAxUU09IiwiYWxnIjoiUlMyNTYifQ.eyJhdF9oYXNoIjoiY1FQM1gzSmU3MHpPM0ZrbU4wTnliZyIsInN1YiI6Imx1Y2hlYW5vQGdtYWlsLmNvbSIsImJ1c2luZXNzVW5pdCI6IlNTTEEtT1RUIiwicmVnaW9ucyI6WyI4MGJiMDYxMC1mZWE5LTExZWEtYTE5MC0wYjBkNzhkOTI5NjYiLCJmOTE3Y2ZmNi0wMjVhLTQ5MTctODRkNi1mYjY4NjY5N2Q5M2MiLCIyZTE2NzIzNy1jN2JiLTQyM2ItYjYwNi1jMzExMTVhZGIxZGEiXSwiYXVkaXRUcmFja2luZ0lkIjoiZjgxOWY2ZjgtNmNlOS00M2ZmLWI5NjUtZjhmMWM0YWZlODk4LTcyMDI3MTkxIiwiaXNvMkNvZGUiOiJBUiIsImlzcyI6Imh0dHBzOi8vcHJvZHJvY2suZGlyZWN0dmdvLmNvbTo0NDMvb3BlbmFtL29hdXRoMi9yZWFsbXMvcm9vdC9yZWFsbXMvc3NsYSIsInRva2VuTmFtZSI6ImlkX3Rva2VuIiwiZGV2aWNlSWQiOiIxaGhiZGNoOHEuYjI4IiwiY3VzdG9tZXJTdGF0dXMiOiJBY3RpdmUiLCJtc29Qcm92aWRlciI6IkdyYW4gSGVybWFubyIsImF6cCI6ImR0dmdvIiwiZmFtaWx5TmFtZSI6IkRpb24iLCJhdXRoX3RpbWUiOjE3MDIyNjM5MzIsImN1c3RvbWVySWQiOiJlNTM0ZTZjMC1iNzZkLTVmMGUtYmIxNy04YmU4M2I4YWQ3MGMiLCJleHAiOjE3MDI0Mjk1NDYsImlhdCI6MTcwMjI2Mzk0NiwiZ2l2ZW5OYW1lIjoiUGVkcm8iLCJ2cmlvRGV2aWNlSWQiOiI0YWM5Nzg0Mi1hMGE5LTQ3NmItYTljOS1kOGMyYWYxZDA2NDAiLCJhdWQiOiJkdHZnbyIsIkNCMSI6ZmFsc2UsImNoYW5uZWxzIjpbIkNIMDEwMDAwMDAwMDMxNSIsIkNIMDEwMDAwMDAwMDMzMSIsIkNIMDEwMDAwMDAwMDM0MSJdLCJ2cmlvQ3VzdG9tZXJJZCI6ImU1MzRlNmMwLWI3NmQtNWYwZS1iYjE3LThiZTgzYjhhZDcwYyIsIm5hbWUiOiJQZWRybyBEaW9uIiwicmVhbG0iOiIvc3NsYSIsImNzbSI6IjIiLCJ0b2tlblR5cGUiOiJKV1RUb2tlbiJ9.1Q62VyGWa-0xUmW9lQFjDvBnTw1ESa17tzoNt3dg8Fu5u4BXySlExpQOlVJoAEZnWG0uAHpAp-oIctNI8xMMK83CadEKMzS1lTm1PWbQPv24eEfUhgTvkA7cmwVH2CCF82JbKcKIQc78C21umIJnAy5oVxhJzzCqHwsz2iPNYl20_deKenvylxuLuLs-zza6IRtFLo9YV2cNBc6WZWE1E1vfc_S3QSAWtTO1M_ZbTWQvBmTs2faPHUcjRWcg193ffk1yUs6YeBvDttv_064js7ib4DqhYmOccXV2MtLxxJWAVcr_RKyA_moAYna0Eif6Vt4NyFcc2uEziIq1e_6GFQ";
+
+
+    var channelId = getParameterByName('id');
+
+    // Set camaras
+    let channelInfo = {
+        "GH": {
+            chid: "CH0100000000341",
+            keyId: "de7d7ded48b437d691966acdc8a97262",
+            key: "c1696c67cf7a678932d33340135ea82b"
+        },
+        "GHCAMARA1": {
+            chid: "CH0100000000342",
+            keyId: "9551559085843488876b472cd5416000",
+            key: "a7dbd673c51a4c73522e7d1a240fa7bc"
+        },
+
+"GHCAMARA2": {
+            chid: "CH0100000000343",
+            keyId: "206ba28f691f34f88d8886cc42702c4c",
+            key: "7830b692416a413e1f31fb81a3bdf752"
+        },
+
+"GHCAMARA3": {
+            chid: "CH0100000000340",
+            keyId: "cd9941e77fc63100986acdcb6bcba661",
+            key: "dc9b59d9a8397b756bdd2607c7614476"
+        },
+      
+
+"TELEFE": {
+            chid: "CH0100000000051",
+            keyId: "d83e2e0cb9735bea9fc9f0b90cea1e14",
+            key: "78ecb51bf93594cd4a7d904bd48bbd0a"
+        },
+
+"EMILIO_PUTAMADRE": {
+            chid: "CH0100000000229",
+            keyId: "cfcaedf675745b9c81e5a55bde8f530b",
+            key: "e623d07319101376ceccf2ed74631c7a"
+        },
+
+"ANAL_13_MAMAS_CRECE": {
+            chid: "CH0100000000091",
+            keyId: "af1d38723d0c3c8e8cb7d4453ba47d3e",
+            key: "b6f78e54681b209ceae4ed382bbe20fc"
+        },
+    };
+
+    // Obtener la información del canal actual
+    let currentChannel = channelInfo[channelId];
+
+    // Verificar si se encontró información para el canal actual
+    if (currentChannel) {
+        fetchAuthorizationToken(token, currentChannel);
+    } else {
+        console.error("No se encontró información para el canal especificado en la URL.");
+    }
+
+    function fetchAuthorizationToken(token, channel) {
+        // Asegúrate de que channel esté definido y tenga keyId y key
+        if (channel && channel.keyId && channel.key) {
+            fetch("https://api.directvgo.com/entitlement/v3/playback/token/authorizer", {
+                method: "POST",
+                headers: {
+                    "Authorization": "Bearer " + token,
+                    "Content-Type": "application/json",
+                    "X-Client-Id": "web",
+                    "X-Client-Version": "3.17.0"
+                },
+                body: JSON.stringify({
+                    contentId: channel.chid,
+                    delay: 0,
+                    isLive: true,
+                    mobileNetwork: true
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.manifest && data.manifest.dash && data.manifest.dash.primary) {
+                    let manifestUrl = data.manifest.dash.primary;
+
+                    fetch(manifestUrl)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('HTTP error! status: ' + response.status);
+                            }
+                            const hdntl = response.headers.get('hdntl');
+                            if (hdntl) {
+                                console.log('hdntl:', hdntl);
+
+                                // Configurar JWPlayer con clearkey y hdntl
+                                let player = jwplayer("player");
+                                player.setup({
+                                    playlist: [{
+                                        sources: [{
+                                            default: false,
+                                            type: "dash",
+                                            title: "Mirá Gran Hermano en vivo | gh.acltv.live",
+                                            file: manifestUrl,
+                                            drm: {
+                                                clearkey: {
+                                                    keyId: channel.keyId,
+                                                    key: channel.key
+                                                }
+                                            },
+                                            label: "0",
+                                            onXhrOpen: function (xhr, url) {
+                                                if (!url.includes("manifest.mpd")) {
+                                                    xhr.setRequestHeader("Hdntl", hdntl);
+                                                }
+                                            }
+                                        }]
+                                    }],
+                                    width: "100%",
+                                    height: "100%",
+                                    aspectratio: "16:9",
+                                    autostart: false,
+                                    cast: true,
+                                    sharing: true
+                                });
+                            } else {
+                                console.log('Header "hdntl" not found in the response.');
+                            }
+                            return response.text();
+                        })
+                        .catch(error => console.error('Error fetching MPD:', error));
+
+                } else {
+                    console.error("Dash primary URL not found in the response.");
+                }
+            })
+            .catch(error => console.error("Error fetching authorization token:", error));
+        } else {
+            console.error("Información incompleta para el canal actual.");
+        }
+    }
+
+    // Función getParameterByName
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
+        var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+ 
  </script>
 
 

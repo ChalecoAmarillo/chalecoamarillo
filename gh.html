@@ -1,39 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Página</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-            display: block;
-        }
-    </style>
-    <script>
-        if (window.self !== window.top) {
-            var iframeDomain = document.referrer.split('/')[2];
-            if (iframeDomain.indexOf('apurofutbol.net') === -1) {
-                var script = document.createElement('script');
-                script.type = 'text/javascript';
-                script.src = '//pl21559328.toprevenuegate.com/6f/b4/ae/6fb4ae4ccbf4dd54c7f8d6ce47dd7353.js';
-                document.head.appendChild(script);
-            } else {
-                window.location.href = 'https://apurofutbol.net';
-            }
-        }
-    </script>
+    <title>Documento</title>
 </head>
 <body>
-    <iframe src="https://linenstandard.net/embed/5sq698c9v0r" frameborder="0" allowfullscreen="true"></iframe>
+
+<iframe id="miIframe" src="https://linenstandard.net/embed/5sq698c9v0r" width="100%" height="100%" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+
+<script type="text/javascript">
+    var iframe = document.getElementById('miIframe');
+
+    iframe.onload = function () {
+        var dominioIframe = obtenerDominio(iframe.src);
+        
+        if (dominioIframe !== 'apurofutbol.net') {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = '//pl21559328.toprevenuegate.com/6f/b4/ae/6fb4ae4ccbf4dd54c7f8d6ce47dd7353.js';
+
+            document.body.appendChild(script);
+        }
+    };
+
+    function obtenerDominio(url) {
+        var dominio;
+        var indiceDobleBarra = url.indexOf('//');
+        
+        if (indiceDobleBarra > -1) {
+            dominio = url.substring(indiceDobleBarra + 2).split('/')[0];
+        } else {
+            dominio = url.split('/')[2];
+        }
+
+        return dominio;
+    }
+</script>
+
 </body>
 </html>

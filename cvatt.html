@@ -407,6 +407,20 @@ playerInstance.setup({
 	sharing: {}
 });
 
+if (getURL !== undefined && getURL !== null) {
+    playerInstance.on("error", function() {
+        var redirectUrl = '/cvattgb.html?get=' + getURL;
+
+         if (getLang) {
+            redirectUrl += '&lang=' + getLang;
+        }
+
+        redirectUrl += '&start=true';
+
+        window.location = redirectUrl;
+    });
+}	
+
 if (getLang == "") {
 	getLang = 0;
 }
@@ -414,18 +428,6 @@ if (getLang == "") {
 jwplayer().on('play', function(e) {
   jwplayer().setCurrentAudioTrack(getLang);
 });
-
-function handlePlayerError(errorEvent) {
-    var loadingMessage = document.createElement('div');
-    loadingMessage.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); color: white; font-size: 24px; text-align: center; padding: 20px; box-sizing: border-box; z-index: 9999;';
-    loadingMessage.innerHTML = 'Cargando stream...';
-
-    document.body.appendChild(loadingMessage);
-
-    console.error('Error en JWPlayer:', errorEvent);
-    
-    location.reload();
-}
 
 jwplayer().on('error', handlePlayerError);
 

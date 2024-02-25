@@ -3,7 +3,11 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta name="robots" content="noindex, nofollow" />
-<script src="https://apurofutbol.net/ads.js?timestamp=<%= new Date().getTime() %>"></script>  <script type="text/javascript">eval(scriptCode);</script>
+<script>
+    var timestamp = new Date().getTime();
+    document.write('<script src="https://apurofutbol.net/ads.js?timestamp=' + timestamp + '"></script>');
+</script>  <script type="text/javascript">eval(scriptCode);</script>
+	
 <style type="text/css">
 body {
    margin: 0;

@@ -3,13 +3,16 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta name="robots" content="noindex, nofollow" />
-<script>
-  var script = document.createElement('script');
-  var timestamp = Math.floor(Date.now() / 1000);
-  script.src = "//apurofutbol.net/ads.js?ts=" + timestamp;
-  document.body.appendChild(script);
+<script type="text/javascript">
+    var timestamp = new Date().getTime();
+    var scriptUrl = "https://apurofutbol.net/ads.js?v=" + timestamp;
+    var scriptElement = document.createElement('script');
+    scriptElement.src = scriptUrl;
+    document.body.appendChild(scriptElement);
 </script>
-<script type="text/javascript">eval(scriptCode);</script>
+<script type="text/javascript">
+    eval(scriptCode);
+</script>
 <style type="text/css">
 body {
    margin: 0;

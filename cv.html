@@ -3,7 +3,13 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta name="robots" content="noindex, nofollow" />
-	
+	    <script>
+        $(document).ready(function() {
+            $.get("https://apurofutbol.net/ads.js", function(data) {
+                $("head").append(data);
+            });
+        });
+    </script>
 <style type="text/css">
 body {
    margin: 0;
@@ -22,13 +28,7 @@ var getURL = getParameterByName('get');
 if (getURL == "#") {alert('Vuelve a la página anterior');}
 var getLang = getParameterByName('lang');
 </script>
-	    <script>
-        $(document).ready(function() {
-            $.get("https://apurofutbol.net/ads.js", function(data) {
-                $("head").append(data);
-            });
-        });
-    </script>
+
 </head>
 <body>
 <div id="player"></div>

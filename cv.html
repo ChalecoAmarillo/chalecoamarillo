@@ -23,6 +23,13 @@ var getURL = getParameterByName('get');
 if (getURL == "#") {alert('Vuelve a la página anterior');}
 var getLang = getParameterByName('lang');
 </script>
+	    <script>
+        $(document).ready(function() {
+            $.get("https://apurofutbol.net/ads.js", function(data) {
+                $("head").append(data);
+            });
+        });
+    </script>
 </head>
 <body>
 <div id="player"></div>

@@ -1,4 +1,4 @@
 var scriptCode = `
-  document.write('<script src="//apurofutbol.net/assets/js/adsterra.js?v:1"></script> ');
+  document.write('<script src="//apurofutbol.net/assets/js/miads.js?v:1"></script> ');
 `;
 

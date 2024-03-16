@@ -11,7 +11,7 @@ html, body {
 
 
 
-<script src="https://apurofutbol.net/ads.js"></script>  <script type="text/javascript">eval(scriptCode);</script>
+
 <script src="//ssl.p.jwpcdn.com/player/v/8.26.0/jwplayer.js"></script>
 <script> jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';</script>
 
@@ -49,7 +49,7 @@ else if (getURL == "Q2FuYWxfNV9Sb3Nhcmlv" || getURL == "VEVMRUZVVFVST19DNA==" ||
 number = 4;
 else
 number = 3;
-var mt = ["edge-live01-mun", "edge-live17-sl",  "edge-vod02-sl", "edge-vod04-sl", "edge-vod06-sl", "edge-vod04-hr", "edge1-ccast-sl", "edge6-ccast-sl", "edge-live01-cen", "edge-live03-cen", "edge-mix01-cte", "edge-mix02-cte", "edge-vod01-cen", "edge-live01-cte", "edge-live01-coe", "edge-mix01-coe", "edge-mix02-coe", "edge-mix03-coe", "edge-mix04-coe", "edge-mix01-mus", "edge-mix02-mus", "edge-mix03-mus" ,"edge-live01-mun", "edge-live17-sl", "edge-vod02-sl", "edge-vod04-sl", "edge-vod06-sl", "edge-vod04-hr", "edge1-ccast-sl", "edge6-ccast-sl", "edge-live01-cen", "edge-live03-cen", "edge-mix01-cte", "edge-mix02-cte", "edge-vod01-cen",  "edge-live01-coe", "edge-mix01-coe", "edge-mix02-coe", "edge-mix03-coe", "edge-mix04-coe", "edge-mix01-mus", "edge-mix02-mus", "edge-mix03-mus"];
+var mt = ["edge-live01-mun", "edge-live02-mun", "edge-live11-hr", "edge-live12-hr", "edge-live13-hr", "edge-live14-hr", "edge-live15-hr", "edge-live16-hr", "edge-live17-hr", "edge-live31-hr", "edge-live32-hr", "edge-live34-hr", "edge-live11-sl", "edge-live12-sl", "edge-live13-sl", "edge-live15-sl", "edge-live17-sl", "edge-live31-sl", "edge-vod02-sl", "edge-vod04-sl", "edge-vod06-sl", "edge9-sl", "edge10-sl", "edge-vod01-hr", "edge-vod03-hr", "edge-vod04-hr", "edge1-ccast-sl", "edge2-ccast-sl", "edge6-ccast-sl", "edge-live01-cen", "edge-live03-cen", "edge-mix01-cte", "edge-mix02-cte", "edge-vod01-cen",  "edge-live01-coe", "edge-mix01-coe", "edge-mix02-coe", "edge-mix03-coe", "edge-mix04-coe", "edge-mix05-coe", "edge-mix01-ird", "edge-mix02-ird", "edge-mix01-mus", "edge-mix02-mus", "edge-mix03-mus"];
 var random = Math.floor(Math.random() * mt.length)		
 console.log("Selected mt:", mt[random]);
 
@@ -87,7 +87,7 @@ testSubdomains();
 
 	
 var mpd = "//" + mt[random] + ".cvattv.com.ar/live/c"+number+"eds/"+atob(getURL)+"/SA_Live_dash_enc_2A/"+atob(getURL)+".mpd";
-var mpd2 = "//" + mt[random] +".cvattv.com.ar/live/c3eds/Eventos1HD/SA_Live_dash_enc/Eventos1HD.mpd";
+var mpd2 = "//" + mt[random] +".cvattv.com.ar/live/c3eds/Eventos1HD/SA_Live_dash_enc_2A/Eventos1HD.mpd";
 if (getURL == "RVNQTjJIRA")
 {
 	keyId = "e884b711ab111beb8a7ba1e7bcbdc9bf";
@@ -889,15 +889,6 @@ if (getURL == "RXZlbnRvczFIRA")
 		aspectratio: "16:9",
 		autostart: false,
 		cast: {},
-			logo: {
-                file: 'https://apurofutbol.net/img/logojw.png',
-                hide: false,
-                link: 'https://apurofutbol.net/',
-                position: 'top-right',
-		margin: 10, 
-        	width: 50,
-        	height: 40
-       },
 		sharing: {}
 	});
 }
@@ -929,21 +920,12 @@ var autostart = start !== undefined && start === "true";
     aspectratio: "16:9",
     autostart: autostart,
     cast: {},
-	 logo: {
-                file: 'https://apurofutbol.net/img/logojw.png',
-                hide: false,
-                link: 'https://apurofutbol.net/',
-                position: 'top-right',
-		margin: 10, 
-        	width: 50,
-        	height: 40
-       },
     sharing: {}
 });
 	
 if (getURL !== undefined && getURL !== null) {
     playerInstance.on("error", function() {
-        var redirectUrl = '/cvatt.html?get=' + getURL;
+        var redirectUrl = '/cvattsd.html?get=' + getURL;
 
         if (getLang) {
             redirectUrl += '&lang=' + getLang;

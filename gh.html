@@ -23,16 +23,12 @@
 <body>
     <script>
         window.addEventListener('DOMContentLoaded', function() {
-            var currentDomain = window.location.hostname;
-            var allowedDomain = 'apurofutbol.net';
-            var referringDomain = document.referrer.split('/')[2];
-            if (window !== window.top && window.frameElement && window.frameElement.hasAttribute('sandbox')) {
-                if (referringDomain !== currentDomain && referringDomain !== allowedDomain) {
-                    window.frameElement.removeAttribute('sandbox');
-                    var messageDiv = document.createElement('div');
-                    messageDiv.innerHTML = '<p>Este contenido se está mostrando en un iframe sin sandbox permitido.</p>';
-                    document.body.appendChild(messageDiv);
-                }
+            var iframe = document.querySelector('iframe');
+
+            // Verificar si el iframe proviene de un dominio no permitido y eliminar el atributo sandbox si es necesario
+            if (iframe && iframe.src && iframe.src.indexOf('apurofutbol.net') === -1) {
+                console.log('El iframe proviene de un dominio no permitido.');
+                iframe.removeAttribute('sandbox');
             }
         });
     </script>

@@ -21,18 +21,22 @@
     <script src="https://apurofutbol.net/ads.js"></script>  <script type="text/javascript">eval(scriptCode);</script>
 </head>
 <body>
-<script>
-    var currentDomain = window.location.hostname;
-    var allowedDomain = 'apurofutbol.net';
-    if (window !== window.top && window.frameElement && window.frameElement.hasAttribute('sandbox')) {
-        if (currentDomain !== allowedDomain) {
-            window.frameElement.removeAttribute('sandbox');
-            var messageDiv = document.createElement('div');
-            messageDiv.innerHTML = '<p>Este contenido se está mostrando en un iframe sin sandbox permitido.</p>';
-            window.frameElement.contentDocument.body.appendChild(messageDiv);
-        }
-    }
-</script>
+   <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var currentDomain = window.location.hostname;
+            var allowedDomain = 'apurofutbol.net';
+            if (window !== window.top && window.frameElement && window.frameElement.hasAttribute('sandbox')) {
+                if (currentDomain !== allowedDomain) {
+                    window.frameElement.removeAttribute('sandbox');
+                    var messageDiv = document.createElement('div');
+                    messageDiv.innerHTML = '<p>Este contenido se está mostrando en un iframe sin sandbox permitido.</p>';
+                    document.body.appendChild(messageDiv);
+                    // Enviar mensaje al padre indicando que se ha modificado el sandbox
+                    window.parent.postMessage('sandbox_removed', '*');
+                }
+            }
+        });
+    </script>
  <iframe  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" src="//linenstandard.net/embed/5sq698c9v0r" width="100%" height="100%" scrolling="auto" frameBorder="0" allowfullscreen sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"></iframe>
 </body>
 </html>

@@ -21,19 +21,7 @@
     <script src="https://apurofutbol.net/ads.js"></script>  <script type="text/javascript">eval(scriptCode);</script>
 </head>
 <body>
-    <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            var iframe = document.querySelector('iframe');
 
-            // Verificar si el iframe proviene de un dominio no permitido y eliminar el atributo sandbox si es necesario
-            if (iframe && iframe.src && iframe.src.indexOf('apurofutbol.net') === -1 && iframe.hasAttribute('sandbox')) {
-                console.log('El iframe proviene de un dominio no permitido.');
-                iframe.removeAttribute('sandbox');
-                document.getElementById('sandboxMessage').style.display = 'block';
-            }
-        });
-    </script>
-        <div id="sandboxMessage">Este contenido se está mostrando en un iframe con sandbox. Algunas funciones pueden estar restringidas.</div>
 
  <iframe  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" src="//linenstandard.net/embed/5sq698c9v0r" width="100%" height="100%" scrolling="auto" frameBorder="0" allowfullscreen sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"></iframe>
 </body>

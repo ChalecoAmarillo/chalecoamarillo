@@ -4,8 +4,8 @@ body {
    padding: 0;
 }
 </style>
-<meta name="referrer" content="no-referrer">
 <script src="https://apurofutbol.net/ads.js"></script>  <script type="text/javascript">eval(scriptCode);</script>
+<meta name="referrer" content="no-referrer">
 <script src="//ssl.p.jwpcdn.com/player/v/8.26.0/jwplayer.js"></script>
 <script> jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
 </script>
@@ -95,8 +95,8 @@ else if (id == 1065)
 }
 else if (id == 1071)
 {
-	keyId = "f19c3a8c638d52c2ab77b9566bcb2996";
-	key = "7400a9f905f172d5d74d7dc440724c8e";
+        keyId = "f19c3a8c638d52c2ab77b9566bcb2996";
+        key = "7400a9f905f172d5d74d7dc440724c8e";
 }
 else if (id == 1233)
 {
@@ -186,7 +186,7 @@ else if (id == 1123)
 else if (id == 1232)
 {
         keyId = "1b9984dc66b259fe8ae597cb4fc1f4c3";
-        key = "fdbbf5a39109349d7b6a997e83fb9e4b";
+        key = "ffb53a94f48f499546869c1f9e877187";
 }
 else if (id == 1157)
 {
@@ -300,8 +300,8 @@ else if (id == 1211)
 }
 else if (id == 1016)
 {
-	keyId = "bd16d3dc021e31369f1df0ce68f0a4f3";
-	key = "3b872c2fbf3c4c7e6a77f126b8ebdc92";
+        keyId = "0191ef1a95d531bf830ebe4f95dd8424";
+        key = "0935628caa8488d6f5a095d476e90875";
 }
 else if (id == 1236)
 {
@@ -530,8 +530,23 @@ else if (id == 1040)
 }
 else if (id == "0070")
 {
-        keyId = "6575e2cb849b581480ab260b70ccfab6";
+        keyId = "08a4277424073a15badafef701a42b8b";
         key = "030601e605c2896a442c73d575a323a8";
+}
+else if (id == "0064")
+{
+        keyId = "50653a20839a57c8b2d3cde6ddc46cdb";
+        key = "8a505419dccb50ee07ecebf5a6b44c63";
+}
+else if (id == "0055")
+{
+        keyId = "bd1af42db82f5a17a0d75246f25f5201";
+        key = "a9edd4e2c410923e9cbcb261102e5008";
+}
+else if (id == "0006")
+{
+        keyId = "3ad3dca103185934acff7a0e9000c112";
+        key = "3f396659d841a55cd1381e6735ecfa1d";
 }
 else if (id == 1035)
 {
@@ -675,8 +690,8 @@ else if (id == "0040")
 }
 else if (id == 1011)
 {
-        keyId = "b9fc5a15382b35818904ecbeed545fd0";
-        key = "8b4d83e2c382780ca615ce6cd6754d79";
+        keyId = "191cb77dc62239db87596dec62c9b98f";
+        key = "9aea5f097603b3dc919ba86694c1a39d";
 }
 else if (id == 0159)
 {
@@ -762,9 +777,17 @@ else if (id == 1057 || id == 1063 || id == 1059)
 {
         url = 'https://'+id+'-vos-da-mt.dtvott.com/DASH';
 }
-else if (id == 1071)
+else if (id == "0006")
 {
-        url = 'https://'+id+'-abc-da-bpk.dtvott.com/f9028faec74be6ec7b3fbb0638dde28a/dtv-tv/dash_live_'+id;
+        url = 'https://'+id+'-bbc.dtvott.com/dash_live_0035';
+}
+else if (id == "0064")
+{
+        url = 'https://0064-jbc.dtvott.com/dash_live_0079';
+}
+else if (id == "0055")
+{
+        url = 'https://0055-jbc.dtvott.com/dash_live_0054';
 }
 else if (id == 1251 || id == 1040 || id == 1035)
 {
@@ -779,6 +802,14 @@ else if (id == 1095 || id == 1264 || id == "0054")
 
 	url = 'https://'+id+'-'+letter+'bc.dtvott.com/dash_live_'+id;
 }
+else if (id == 1071)
+{
+        url = 'https://'+id+'-abc-da-mt.dtvott.com/dash_live_'+id;
+}
+else if (id == 1232)
+{
+        url = 'https://1071-abc-da-mt.dtvott.com/dash_live_'+id;
+}
 else if (id == 1009)
 {
         url = 'https://dtvott-cwtests.akamaized.net/dash_live_'+id;
@@ -786,6 +817,10 @@ else if (id == 1009)
 else if (id == 1233)
 {
 	url = 'https://1062-abc.dtvott.com/dash_live_'+id;
+}
+else if (id == 1038)
+{
+        url = 'https://1062-abc-da-bpk.dtvott.com/dash_live_'+id;
 }
 else
 {
@@ -822,6 +857,15 @@ playerInstance.setup({
 	aspectratio: "16:9",
 	autostart: false,
 	cast: {},
+	logo: {
+                file: 'https://apurofutbol.net/img/logojw.png',
+                hide: false,
+                link: 'https://apurofutbol.net/',
+                position: 'top-right',
+		margin: 10, 
+        	width: 50,
+        	height: 40
+       },
 	sharing: {}
 });
 
@@ -833,12 +877,12 @@ jwplayer().on('play', function(e) {
   jwplayer().setCurrentAudioTrack(getLang);
 });
 
-if (id == 1059 || id == 1063 || id == 1185 || id == 1157 || id == 1071 || id == 1011 || id == 1016)
+if (id == 1059 || id == 1063 || id == 1185 || id == 1157 || id == 1071 || id == 1011 || id == 1016 || id == 1232)
 {
 	if (id == 1059 || id == 1063 || id == 1185 || id == 1157 || id == 1011 || id == 1016)
 		url = 'https://whitemouseapple.com/'+id+'-vos.mpd';
-	else if (id == 1071)
-		url = 'https://whitemouseapple.com/1071-abc-da-bpk.mpd';
+	else
+		url = 'https://whitemouseapple.com/'+id+'-abc-da-mt.mpd';
 	
 	playerInstance.on("error", function() {
 		playerInstance.setup({
@@ -869,4 +913,3 @@ if (id == 1059 || id == 1063 || id == 1185 || id == 1157 || id == 1071 || id == 
 	});
 }
 </script>
-

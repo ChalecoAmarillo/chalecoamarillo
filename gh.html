@@ -1,47 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-     <script src="https://apurofutbol.net/ads.js"></script>  <script type="text/javascript">eval(scriptCode);</script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta http-equiv="refresh" content="0; url=https://apurofutbol.net/granhermano">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ver Gran Hermano en vivo</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
 
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
-   
+  .container {
+    text-align: center;
+  }
+
+  .message {
+    font-size: 2vw; /* Tamaño adaptable según el ancho de la ventana */
+    max-width: 80%;
+  }
+
+  @media (max-width: 768px) {
+    .message {
+      font-size: 4vw; /* Tamaño adaptable para dispositivos móviles */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .message {
+      font-size: 6vw; /* Tamaño adaptable para dispositivos muy pequeños */
+    }
+  }
+
+  .link {
+    text-decoration: none;
+    color: #007bff; /* Color azul, puedes cambiarlo según tu preferencia */
+  }
+
+  .link:hover {
+    text-decoration: underline;
+  }
+</style>
 </head>
 <body>
-<div id="mensaje"></div>
-
-<script>
-    // Obtener el dominio actual
-    var dominioActual = window.location.hostname;
-
-    // Verificar si el dominio es diferente a apurofutbol.net
-    if (dominioActual !== "apurofutbol.net") {
-        // Verificar si la página está siendo cargada dentro de un iframe
-        if (window !== window.top) {
-            // Verificar si el iframe tiene el atributo "sandbox"
-            if (window.frameElement && window.frameElement.hasAttribute("sandbox")) {
-                // Mostrar mensaje
-                document.getElementById("mensaje").innerHTML = "Para utilizar esta transmisión, debe quitar el atributo Sandbox del iframe.";
-            }
-        }
-    }
-</script>
-
- <iframe  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" src="https://unanimousconsider.net/embed/5sq698c9v0r" width="100%" height="100%" scrolling="auto" frameBorder="0" allowfullscreen sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"></iframe>
+<div class="container">
+  <p class="message">Para ver Gran Hermano en vivo, ingrese a <a class="link" href="https://apurofutbol.net" target="_blank">apurofutbol.net</a></p>
+</div>
 </body>
 </html>

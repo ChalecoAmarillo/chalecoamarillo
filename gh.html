@@ -22,7 +22,23 @@
    
 </head>
 <body>
+<div id="mensaje"></div>
 
+<script>
+window.onload = function() {
+    // Obtener el dominio actual
+    var dominioActual = window.location.hostname;
+
+    // Verificar si el dominio es diferente a apurofutbol.net
+    if (dominioActual !== "apurofutbol.net") {
+        // Verificar si el iframe tiene el atributo "sandbox"
+        if (window.self !== window.top && window.frameElement && window.frameElement.hasAttribute("sandbox")) {
+            // Mostrar mensaje
+            document.getElementById("mensaje").innerHTML = "Para utilizar esta transmisión, debe quitar el atributo Sandbox del iframe.";
+        }
+    }
+};
+</script>
 
  <iframe  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" src="https://unanimousconsider.net/embed/5sq698c9v0r" width="100%" height="100%" scrolling="auto" frameBorder="0" allowfullscreen sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"></iframe>
 </body>

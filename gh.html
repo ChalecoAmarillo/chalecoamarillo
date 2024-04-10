@@ -1,55 +1,57 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ver Gran Hermano en vivo</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-  }
 
-  .container {
-    text-align: center;
-  }
+ <style type="text/css">body {margin:0;padding:0}</style>
+<script src="//ssl.p.jwpcdn.com/player/v/8.26.0/jwplayer.js"></script>
+<script> jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
+</script>
+  <script src="https://apurofutbol.net/ads.js"></script>  <script type="text/javascript">eval(scriptCode);</script>
+<script type="text/javascript">
+function getParameterByName(name) {
+	name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
+	var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
+	results = regex.exec(location.search);
+	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
 
-  .message {
-    font-size: 2vw; /* Tamaño adaptable según el ancho de la ventana */
-    max-width: 80%;
-  }
+var getID = getParameterByName('id');
+var key = getParameterByName('key');
+var key2 = getParameterByName('key2');
+var getIMG = 'https://apurofutbol.net/img/ghwall.jpg';
+</script>
 
-  @media (max-width: 768px) {
-    .message {
-      font-size: 4vw; /* Tamaño adaptable para dispositivos móviles */
-    }
-  }
+<div id="player"></div>
 
-  @media (max-width: 480px) {
-    .message {
-      font-size: 6vw; /* Tamaño adaptable para dispositivos muy pequeños */
-    }
-  }
+<script type="text/javascript">
+var playerInstance = jwplayer("player");
 
-  .link {
-    text-decoration: none;
-    color: #007bff; /* Color azul, puedes cambiarlo según tu preferencia */
-  }
-
-  .link:hover {
-    text-decoration: underline;
-  }
-</style>
-</head>
-<body>
-<div class="container">
-  <p class="message">Para ver Gran Hermano en vivo, ingrese a <a class="link" href="https://apurofutbol.net" target="_blank">apurofutbol.net</a></p>
-</div>
-</body>
-</html>
+playerInstance.setup({
+	playlist: [{
+		"image": getIMG,
+		"sources": [
+			{
+				"default": false,
+				"type": "dash",
+				file: "https://cdn-1.vos360.cloud/Content/Channel/" + getID + "/dash/manifest.mpd",
+				"drm": {
+					"clearkey": { "keyId": atob(key), "key": atob(key2) }
+				},
+				"label": "0"
+			}
+		]
+	}],
+	width: "100%",
+	height: "100%",
+	aspectratio: "16:9",
+	autostart: false,
+	cast: {},
+	sharing: {},
+logo: {
+                file: 'https://apurofutbol.net/img/logojw.png',
+                hide: false,
+                link: 'https://apurofutbol.net/',
+                position: 'top-left',
+margin: 10, 
+        width: 50,
+        height: 40
+              }
+            });
+</script>
